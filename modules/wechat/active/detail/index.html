@@ -1,0 +1,47 @@
+<template name="wxActiveDetail">
+    <div class="wxActiveDetail">
+        <div class="banner" style="background-image:url({{active.thumb}}?x-oss-process=image/resize,m_lfit,w_375,limit_0/auto-orient,0/quality,q_90)">
+            <div class="text">
+                <h1>{{active.name}}</h1>
+                <h2>{{active.summary}}</h2>
+            </div>
+        </div>
+        <div class="list">
+            {{> pictureList items=pictures key="url" className="item" zip="x-oss-process=image/resize,m_lfit,w_150,limit_0/auto-orient,0/quality,q_90" }}
+            <div class="clear"></div>
+        </div>
+    </div>
+    {{#if active.isOpen}}
+    <div class="wxActive-camera"><i class="fa fa-camera"></i></div>
+    {{/if }} 
+    {{#if needPwd}}
+    <div class="wxActiveDetail_Pwd">
+        <div class="center-pan">
+            <div class="animated bounceIn center-animate">
+                <h1>请输入访问密码</h1>
+                <div class="show animated _flex">
+                    <div class="num _flex-1">{{pwdInput 0}}</div>
+                    <div class="num _flex-1">{{pwdInput 1}}</div>
+                    <div class="num _flex-1">{{pwdInput 2}}</div>
+                    <div class="num _flex-1">{{pwdInput 3}}</div>
+                </div>
+                <div class="panl">
+                    <div class="btn" data-for="1"><b class="_animation">1</b></div>
+                    <div class="btn" data-for="2"><b class="_animation">2</b></div>
+                    <div class="btn" data-for="3"><b class="_animation">3</b></div>
+                    <div class="btn" data-for="4"><b class="_animation">4</b></div>
+                    <div class="btn" data-for="5"><b class="_animation">5</b></div>
+                    <div class="btn" data-for="6"><b class="_animation">6</b></div>
+                    <div class="btn" data-for="7"><b class="_animation">7</b></div>
+                    <div class="btn" data-for="8"><b class="_animation">8</b></div>
+                    <div class="btn" data-for="9"><b class="_animation">9</b></div>
+                    <div class="btn del" data-for="del"><b class="_animation">删除</b></div>
+                    <div class="btn" data-for="0"><b class="_animation">0</b></div>
+                    <div class="btn submit" data-for="sub"><b class="_animation">确认</b></div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</template>

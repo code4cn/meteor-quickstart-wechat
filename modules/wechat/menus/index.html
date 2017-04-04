@@ -1,0 +1,24 @@
+<template name="wxMenus">
+	<div class="wxMenus">
+		<div class="bottom _flex">
+			{{#each menus 'root'}}
+				{{#if  menus _id}}
+					<div class="_flex-1 l1link has-chlidren" >
+						<div class="txt">{{text}}</div>
+
+						<div class="children ">
+							<div class="list animated bounceInUp">
+								{{#each menus _id}}
+									<a class="l2link" href="{{url}}">{{text}}</a>
+								{{/each }}
+							</div>
+							
+						</div>
+					</div>
+				{{else}}
+					<a class="_flex-1 l1link" href="{{url}}">{{text}}</a>
+				{{/if}}
+			{{/each }}
+		</div>
+	</div>
+</template>

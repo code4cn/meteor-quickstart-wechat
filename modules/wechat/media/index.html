@@ -1,0 +1,34 @@
+<template name="wxMedia">
+   <div class="wxMediaList">
+	   	<div class="banner" style="background-image:url({{category.thumb}}?x-oss-process=image/resize,m_lfit,w_375,limit_0/auto-orient,0/quality,q_90)">
+		   	<div class="text" >
+		   		<h1>{{category.name}}</h1>
+		   		<h2>{{category.summary}}</h2>
+		   	</div>
+	   </div>
+	   <div class="_flex navi">
+	   		{{#if compare category.parent "root"}}
+	   			<a class="item _flex-1" data-for="{{category._id}}" href="/wx/media?id={{category._id}}">推荐</a>
+	   		{{else}}
+	   			<a class="item _flex-1" data-for="{{category.parent}}" href="/wx/media?id={{category.parent}}">推荐</a>
+	   		{{/if}}
+	   		{{#each children}}
+	   		<a class="item _flex-1" data-for="{{_id}}" href="/wx/media?id={{_id}}">{{name}}</a>
+	   		{{/each }}
+	   </div>
+	   <div class="weui-panel weui-panel_access">
+            <div class="weui-panel__bd">
+            	{{#each medias}}
+                <div data-href="{{fixRd url}}"  class="weui-media-box weui-media-box_appmsg" style="z-index:10;">
+                    <div class="weui-media-box__hd img-bg" style="background-image:url({{thumb}})">
+                    </div>
+                    <div class="weui-media-box__bd">
+                        <h4 class="weui-media-box__title">{{title}}</h4>
+                        <p class="weui-media-box__desc">{{digest}}</p>
+                    </div>
+                </div>
+                {{/each }}
+            </div>
+        </div>
+   </div>
+</template>

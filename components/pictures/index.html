@@ -1,0 +1,8 @@
+<template name="pictureList">
+	{{#each items}}
+		{{>pictureItem option=itemData}}
+	{{/each }}
+</template>
+<template name="pictureItem">
+	<div class="{{option.className}} picture_loadding animated bounceIn" style="animation-duration:.8s;animation-delay:{{random}}s"></div>
+</template>

@@ -1,0 +1,37 @@
+<template name="wxActiveUpload">
+<div class="wxActiveUpload">
+    <div class="tips">
+        <h1 class="title">活动图片上传</h1>
+        <p class="desc">
+        	<i class="fa fa-check-square-o"></i>
+        	<a href="/wx/active/declaration">我已阅读并同意《实时活动平台使用原则》</a>
+        </p>
+    </div>
+    <div class="">
+        <div class="weui-cells weui-cells_form">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <div class="weui-uploader">
+                        <div class="weui-uploader__hd">
+                            <p class="weui-uploader__title">选择图片</p>
+                            <div class="weui-uploader__info">0/0</div>
+                        </div>
+                        <div class="weui-uploader__bd">
+                            <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+                            <div class="weui-uploader__input-box">
+                                <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+       
+    </div>
+     <div class="spacing">
+        	 <a href="javascript:;" class="weui-btn weui-btn_primary" id="upload">发布</a>
+        	 <a href="/wx/active/detail?id={{active._id}}" class="weui-btn weui-btn_default">返回</a>
+        </div>
+</div>
+</template>
