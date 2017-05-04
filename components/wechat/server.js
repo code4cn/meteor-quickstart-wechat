@@ -75,6 +75,7 @@ Accounts.registerLoginHandler('login', function(loginRequest) {
                     "profile.province": json_step4.province,
                     "profile.city": json_step4.city,
                     "profile.country": json_step4.country,
+                    "tmp":false,
                 }});
                 //查询当前OPENID是否在列表内
                 // if(user.profile && user.profile.openid){
@@ -99,6 +100,7 @@ Accounts.registerLoginHandler('login', function(loginRequest) {
                         "province": json_step4.province,
                         "city": json_step4.city,
                         "country": json_step4.country,
+                        "tmp":false,
                     },
                     "type":"wechat"
                 });

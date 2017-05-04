@@ -1,8 +1,8 @@
 Package.describe({
     name: 'fami:wechat-framework',
-    version: '0.1.9',
-    summary: 'meteor-Quickstart-wechat-framework',
-    git: 'https://github.com/code4cn/meteor-Quickstart-wechat-framework.git',
+    version: '0.2.0',
+    summary: '微信原型用于快速搭建一个项目',
+    git: 'https://github.com/code4cn/meteor-quickstart-wechat',
     documentation: 'README.md'
 });
 

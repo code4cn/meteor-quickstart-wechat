@@ -17,7 +17,7 @@ Template.wxMenus.events({
    			$(".show-children").removeClass("show-children");
    			target.addClass("show-children");
    		}
-   		return false;
+   		
    }	
 });
 Template.wxMenus.onRendered(function() {
